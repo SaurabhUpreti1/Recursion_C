@@ -7,17 +7,12 @@ void reverseString(string &name, int i, int j)
         return;
     }
     swap(name[i], name[j]);
-    i++;
-    j--;
-    reverseString(name, i, j);
+    reverseString(name, i++, j++);
 }
 int main()
 {
-    int i = 0;
-
     string name = "saurabh";
-    int j = name.length() - 1;
-    reverseString(name, i, j);
+    reverseString(name, 0, name.length()-1);
     cout << name;
     return 0;
 }
